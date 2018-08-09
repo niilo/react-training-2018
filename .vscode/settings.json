@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true,
+  "editor.snippetSuggestions": "top"
+}
