@@ -11,6 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "precommit": "pretty-quick staged",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
