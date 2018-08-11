@@ -14,7 +14,7 @@
     "es6": true
   },
   "rules": {
-    "no-console": "error",
+    "no-console": "off",
     "import/no-useless-path-segments": "off",
     "import/no-unassigned-import": "off",
     "max-lines": "off",
