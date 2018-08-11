@@ -11,15 +11,37 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "precommit": "pretty-quick staged",
+    "precommit": "lint-staged",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "yarn run lint --fix",
+    "format": "prettier --write \"**/*.+(js|md|ts|css|sass|less|graphql|yml|yaml|scss|json|vue)\"",
     "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "cross-env CI=true yarn test --findRelatedTests",
+      "git add"
+    ],
+    "*.{md,ts,css,sass,less,graphql,yml,yaml,scss,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@types/react": "^16.4.8",
     "@types/react-dom": "^16.0.7",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-kentcdodds": "^14.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
     "husky": "^0.14.3",
-    "prettier": "^1.14.2",
-    "pretty-quick": "^1.6.0"
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.14.2"
   }
 }

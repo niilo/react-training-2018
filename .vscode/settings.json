@@ -3,6 +3,11 @@
     "*.js": "javascriptreact"
   },
   "editor.formatOnSave": true,
-  "prettier.eslintIntegration": true,
+  // Enable/disable default JavaScript formatter (For Prettier)
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+  "prettier.eslintIntegration": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
   "editor.snippetSuggestions": "top"
 }
