@@ -9,7 +9,10 @@ import Results from './components/Results';
 import Popular from './components/Popular';
 import rootReducer from './rootReducer';
 
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 class App extends Component {
   render() {
