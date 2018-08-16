@@ -1,11 +1,5 @@
 {
-  "extends": [
-    "prettier",
-    "kentcdodds",
-    "kentcdodds/react",
-    "kentcdodds/jest",
-    "kentcdodds/jsx-a11y"
-  ],
+  "extends": ["prettier", "kentcdodds", "kentcdodds/react", "kentcdodds/jest"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
@@ -15,6 +9,7 @@
   },
   "rules": {
     "no-console": "off",
+    "react/no-unused-prop-types": "off",
     "import/no-useless-path-segments": "off",
     "import/no-unassigned-import": "off",
     "max-lines": "off",
