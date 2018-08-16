@@ -1,91 +1,86 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {
+  setFirstPlayer,
+  setSecondPlayer,
+  resetFirstPlayer,
+  resetSecondPlayer,
+} from '../battle/actions';
 import PlayerInput from './PlayerInput';
 import PlayerPreview from './PlayerPreview';
 
-class Battle extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playerOneName: '',
-      playerTwoName: '',
-      playerOneImage: null,
-      playerTwoImage: null,
-    };
-  }
-  handleSubmit = (id, username) => {
-    this.setState(() => {
-      const newState = {};
-      newState[`${id}Name`] = username;
-      newState[`${id}Image`] = `https://github.com/${username}.png?size=200`;
-      return newState;
-    });
-  };
-
-  handleReset = id => {
-    this.setState(() => {
-      const newState = {};
-      newState[`${id}Name`] = '';
-      newState[`${id}Image`] = null;
-      return newState;
-    });
-  };
-
-  render() {
-    const match = this.props.match;
-    const playerOneName = this.state.playerOneName;
-    const playerTwoName = this.state.playerTwoName;
-    const playerOneImage = this.state.playerOneImage;
-    const playerTwoImage = this.state.playerTwoImage;
-    return (
-      <div>
-        <div className="row">
-          {!playerOneName && (
-            <PlayerInput
-              id="playerOne"
-              label="Player One"
-              onSubmit={this.handleSubmit}
-            />
-          )}
-          {playerOneImage !== null && (
-            <PlayerPreview
-              avatar={playerOneImage}
-              username={playerOneName}
-              onReset={this.handleReset}
-              id="playerOne"
-            />
-          )}
-          {!playerTwoName && (
-            <PlayerInput
-              id="playerTwo"
-              label="Player Two"
-              onSubmit={this.handleSubmit}
-            />
-          )}
-          {playerTwoImage !== null && (
-            <PlayerPreview
-              avatar={playerTwoImage}
-              username={playerTwoName}
-              onReset={this.handleReset}
-              id="playerTwo"
-            />
-          )}
-        </div>
-        {playerOneImage &&
-          playerTwoImage && (
-            <Link
-              className="button"
-              to={{
-                pathname: `${match.url}/results`,
-                search: `?playerOneName=${playerOneName}&playerTwoName=${playerTwoName}`,
-              }}
-            >
-              Battle
-            </Link>
-          )}
+const Battle = props => {
+  const {match, playerOne, playerTwo} = props;
+  return (
+    <div>
+      <div className="row">
+        {!playerOne.name && (
+          <PlayerInput
+            id="playerOne"
+            label="Player One"
+            onSubmit={props.setFirstPlayer}
+          />
+        )}
+        {playerOne.image !== null && (
+          <PlayerPreview
+            avatar={playerOne.image}
+            username={playerOne.name}
+            onReset={props.resetFirstPlayer}
+            id="playerOne"
+          />
+        )}
+        {!playerTwo.name && (
+          <PlayerInput
+            id="playerTwo"
+            label="Player Two"
+            onSubmit={props.setSecondPlayer}
+          />
+        )}
+        {playerTwo.image !== null && (
+          <PlayerPreview
+            avatar={playerTwo.image}
+            username={playerTwo.name}
+            onReset={props.resetSecondPlayer}
+            id="playerTwo"
+          />
+        )}
       </div>
-    );
-  }
-}
+      {playerOne.image &&
+        playerTwo.image && (
+          <Link
+            className="button"
+            to={{
+              pathname: `${match.url}/results`,
+              search: `?playerOneName=${playerOne.name}&playerTwoName=${
+                playerTwo.name
+              }`,
+            }}
+          >
+            Battle
+          </Link>
+        )}
+    </div>
+  );
+};
+const mapStateToProps = state => ({
+  playerOne: state.battle.playerOne,
+  playerTwo: state.battle.playerTwo,
+});
 
-export default Battle;
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      setFirstPlayer,
+      setSecondPlayer,
+      resetFirstPlayer,
+      resetSecondPlayer,
+    },
+    dispatch,
+  );
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Battle);

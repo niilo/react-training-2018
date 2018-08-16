@@ -23,3 +23,25 @@ it('renders default correctly', () => {
   const tree = renderer.create(<Player {...data} />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+it('renders empty object correctly', () => {
+  const data = {
+    label: 'label',
+    score: 12,
+    profile: {
+      name: 'asdd',
+      location: 'asd',
+      company: 'asdd',
+      followers: 1,
+      following: 1,
+      public_repos: 2,
+      html_url: 'https://github.com/facebook/react',
+      stargazers_count: 73600,
+      login: 'asd',
+      blog: 'https://github.com/facebook/react',
+      avatar_url: 'https://avatars3.githubusercontent.com/u/69631?v=4',
+    },
+  };
+  const tree = renderer.create(<Player {...data} />).toJSON();
+  expect(tree).toMatchSnapshot();
+});

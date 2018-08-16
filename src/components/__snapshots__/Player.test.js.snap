@@ -42,3 +42,46 @@ exports[`renders default correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`renders empty object correctly 1`] = `
+<div>
+  <h1
+    className="header"
+  >
+    label
+  </h1>
+  <h3
+    style={
+      Object {
+        "textAling": "center",
+      }
+    }
+  >
+    Score: 
+    12
+  </h3>
+  <div>
+    <div
+      className="column"
+    >
+      <img
+        alt="Avatar for asd"
+        className="avatar"
+        src="https://avatars3.githubusercontent.com/u/69631?v=4"
+      />
+      <h2
+        className="username"
+      >
+        @
+        asd
+      </h2>
+    </div>
+    <button
+      className="reset"
+      onClick={[Function]}
+    >
+      Reset
+    </button>
+  </div>
+</div>
+`;

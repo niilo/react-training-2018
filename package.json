@@ -6,9 +6,11 @@
     "query-string": "^6.1.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.4.2"
+    "react-test-renderer": "^16.4.2",
+    "redux": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,7 +26,6 @@
     "*.{js,jsx}": [
       "eslint --fix",
       "prettier --write",
-      "cross-env CI=true yarn test --findRelatedTests",
       "git add"
     ],
     "*.{md,ts,css,sass,less,graphql,yml,yaml,scss,json}": [
