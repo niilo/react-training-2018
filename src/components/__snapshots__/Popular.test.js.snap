@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default correctly 1`] = `
+<div>
+  <ul
+    className="languages"
+  >
+    <li
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#d0021b",
+        }
+      }
+    >
+      All
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      JavaScript
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      Ruby
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      Java
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      CSS
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      Python
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      Golang
+    </li>
+  </ul>
+  <p
+    style={
+      Object {
+        "fontSize": "35px",
+        "textAlign": "center",
+      }
+    }
+  >
+    downloading
+  </p>
+</div>
+`;
+
+exports[`renders selected Javascriot correctly 1`] = `
+<div>
+  <ul
+    className="languages"
+  >
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      All
+    </li>
+    <li
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#d0021b",
+        }
+      }
+    >
+      JavaScript
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      Ruby
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      Java
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      CSS
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      Python
+    </li>
+    <li
+      onClick={[Function]}
+      style={null}
+    >
+      Golang
+    </li>
+  </ul>
+  <p
+    style={
+      Object {
+        "fontSize": "35px",
+        "textAlign": "center",
+      }
+    }
+  >
+    downloading
+  </p>
+</div>
+`;

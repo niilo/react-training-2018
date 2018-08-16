@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default correctly 1`] = `
+<ul
+  className="popular-list"
+>
+  <li
+    className="popular-item"
+  >
+    <div
+      className="popular-rank"
+    >
+      #
+      1
+    </div>
+    <ul
+      className="space-list-item"
+    >
+      <li>
+        <img
+          alt="Avatar for facebook"
+          className="avatar"
+          src="https://avatars3.githubusercontent.com/u/69631?v=4"
+        />
+      </li>
+      <li>
+        <a
+          href="https://github.com/facebook/react"
+        >
+          react
+        </a>
+      </li>
+      <li>
+        @
+        facebook
+      </li>
+      <li>
+        73600
+         stars
+      </li>
+    </ul>
+  </li>
+  <li
+    className="popular-item"
+  >
+    <div
+      className="popular-rank"
+    >
+      #
+      2
+    </div>
+    <ul
+      className="space-list-item"
+    >
+      <li>
+        <img
+          alt="Avatar for facebook"
+          className="avatar"
+          src="https://avatars3.githubusercontent.com/u/69631?v=4"
+        />
+      </li>
+      <li>
+        <a
+          href="https://github.com/facebook/react"
+        >
+          react2
+        </a>
+      </li>
+      <li>
+        @
+        facebook
+      </li>
+      <li>
+        73600
+         stars
+      </li>
+    </ul>
+  </li>
+</ul>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default correctly 1`] = `
+<form
+  className="column"
+  onSubmit={[Function]}
+>
+  <label
+    className="header"
+    htmlFor="username"
+  >
+    user1
+  </label>
+  <input
+    autoComplete="off"
+    id="username"
+    onChange={[Function]}
+    placeholder="github username"
+    type="text"
+    value=""
+  />
+  <button
+    className="button"
+    disabled={true}
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;

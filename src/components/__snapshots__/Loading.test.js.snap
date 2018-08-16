@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default correctly 1`] = `
+<p
+  style={
+    Object {
+      "fontSize": "35px",
+      "textAlign": "center",
+    }
+  }
+>
+  downloading
+</p>
+`;

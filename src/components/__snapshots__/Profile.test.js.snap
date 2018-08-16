@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default correctly 1`] = `
+<div>
+  <div
+    className="column"
+  >
+    <img
+      alt="Avatar for facebook"
+      className="avatar"
+      src="https://avatars3.githubusercontent.com/u/69631?v=4"
+    />
+    <h2
+      className="username"
+    >
+      @
+      facebook
+    </h2>
+  </div>
+  <button
+    className="reset"
+    onClick={[Function]}
+  >
+    Reset
+  </button>
+</div>
+`;
